@@ -11,10 +11,18 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div class="desktop-blocker" aria-hidden="true">
+    <div class="dbox">
+      <h2>Solo móvil 📱</h2>
+      <p>Esta página está optimizada exclusivamente para celular.</p>
+      <p class="muted small">Abrila desde tu teléfono para continuar.</p>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="./">
-        <img src="assets/images/logo.jpg" alt="El Asado Party" height="52" />
+        <img src="assets/images/logo-asado.jpg" alt="El Asado Party" height="52" />
       </a>
       <nav class="nav">
         <button class="nav-toggle" aria-label="Menu">☰</button>
@@ -24,7 +32,7 @@
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#sobre">Sobre nosotros</a></li>
           <li><a href="#instagram">Instagram</a></li>
-          <li><a class="btn btn-yellow" href="eventos.html">Inscribite</a></li>
+          <li><a class="btn btn-primary" href="eventos.html">Comprar entradas</a></li>
         </ul>
       </nav>
     </div>
@@ -37,13 +45,13 @@
       Tu navegador no soporta video de fondo.
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content container"><div class="hero-bubble">
-      <h1 class="title">El Asado <span>Party</span></h1>
-      <p class="subtitle">Unimos música, cultura y el mejor asado argentino en Colombia.</p>
-      <div class="hero-actions">
+    <div class="hero-content container">
+      <div class="hero-bubble">
+        <h1 class="title">El Asado Party</h1>
+        <p class="subtitle">Música, cultura y el mejor asado argentino en Colombia.</p>
         <a class="btn btn-primary" href="eventos.html">Comprar entradas</a>
       </div>
-    </div></div>
+    </div>
   </section>
 
   <!-- PROXIMOS EVENTOS -->
@@ -69,7 +77,7 @@
           <a class="btn btn-primary" href="eventos.html">Comprar entradas</a>
         </div>
       </article>
-    </div></div>
+    </div>
   </section>
 
   <!-- GALERÍA -->
@@ -89,16 +97,15 @@
           <div class="slide"><img src="assets/images/gallery/8.jpg" alt="Galería 8"></div>
           <div class="slide"><img src="assets/images/gallery/9.jpg" alt="Galería 9"></div>
           <div class="slide"><img src="assets/images/gallery/10.jpg" alt="Galería 10"></div>
-          
         </div>
         <button class="slider-btn next" aria-label="siguiente">›</button>
       </div>
-      <p class="muted center">Subí tus fotos a <code>assets/images/gallery/</code> con el mismo nombre o agregá más y clóná un bloque <code>.slide</code>.</p>
-    </div></div>
+      <p class="muted center">Subí tus fotos a <code>assets/images/gallery/</code> y actualizá los nombres o duplicá más <code>.slide</code>.</p>
+    </div>
   </section>
 
   <!-- SOBRE NOSOTROS -->
-  <section id="sobre" class="section container">          
+  <section id="sobre" class="section container">
     <h2 class="section-title">Somos cultura argentina</h2>
     <div class="grid about">
       <div>
@@ -116,12 +123,12 @@
           <li>🇦🇷 Fiesta y tradición</li>
         </ul>
       </div>
-      <div class="mosaic">
+<div class="mosaic">
         <img src="assets/images/Asado.jpg" alt="Parrilla" />
         <img src="assets/images/Fernet.jpg" alt="Fernet" />
         <img src="assets/images/publico.jpg" alt="Público" />
       </div>
-    </div></div>
+    </div>
   </section>
 
   <!-- INSTAGRAM -->
@@ -149,15 +156,15 @@
       </div>
 
       <p class="center">
-        <a class="btn btn-yellow" href="https://www.instagram.com/el.asado.party/" target="_blank" rel="noopener">@el.asado.party</a>
+        <a class="btn btn-primary" href="https://www.instagram.com/el.asado.party/" target="_blank" rel="noopener">@el.asado.party</a>
       </p>
-    </div></div>
+    </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <img src="assets/images/logo.jpg" alt="El Asado Party" height="40" />
+        <img src="assets/images/logo-asado.jpg" alt="El Asado Party" height="40" />
         <p class="muted small">© <span id="year"></span> El Asado Party — Todos los derechos reservados.</p>
       </div>
       <ul class="footer-list">

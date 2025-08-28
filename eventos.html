@@ -11,10 +11,18 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+  <div class="desktop-blocker" aria-hidden="true">
+    <div class="dbox">
+      <h2>Solo móvil 📱</h2>
+      <p>Esta página está optimizada exclusivamente para celular.</p>
+      <p class="muted small">Abrila desde tu teléfono para continuar.</p>
+    </div>
+  </div>
+
   <header class="site-header solid">
     <div class="container header-inner">
       <a class="brand" href="./">
-        <img src="assets/images/logo.jpg" alt="El Asado Party" height="52" />
+        <img src="assets/images/logo-asado.jpg" alt="El Asado Party" height="52" />
       </a>
       <nav class="nav">
         <button class="nav-toggle" aria-label="Menu">☰</button>
@@ -28,7 +36,7 @@
   </header>
 
   <main class="section container narrow">
-    <h1 class="section-title">Inscripción al Festival Argentino — 6 de Septiembre</h1>
+    <h1 class="section-title">Inscripción — 6 de Septiembre</h1>
     <p class="muted">Completá el formulario, elegí tu plan y generá tu QR. <b>Recordá</b> enviar el comprobante por WhatsApp al <a href="https://wa.me/573122112949" target="_blank" rel="noopener">312 211 2949</a>.</p>
 
     <form id="inscripcionForm" class="card form">
@@ -79,7 +87,7 @@
 
       <div class="actions">
         <button class="btn btn-primary" type="submit">Generar QR</button>
-        <a class="btn btn-outline" href="https://home.passline.com/home" target="_blank" rel="noopener">Comprar tu ticket</a>
+        <a class="btn btn-outline" href="https://home.passline.com/home" target="_blank" rel="noopener">Comprar tu ticket en Passline</a>
       </div>
     </form>
 
@@ -90,7 +98,7 @@
         <img id="qrImg" alt="QR de confirmación" />
       </div>
       <div class="actions">
-        <a id="dlQR" class="btn btn-yellow" download="asado-party-qr.png">Descargar QR</a>
+        <a id="dlQR" class="btn btn-primary" download="asado-party-qr.png">Descargar QR</a>
         <a id="sendWA" class="btn btn-outline" target="_blank" rel="noopener">Enviar comprobante por WhatsApp</a>
       </div>
       <details class="token-details">
@@ -104,7 +112,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <img src="assets/images/logo.jpg" alt="El Asado Party" height="40" />
+        <img src="assets/images/logo-asado.jpg" alt="El Asado Party" height="40" />
         <p class="muted small">© <span id="year"></span> El Asado Party — Todos los derechos reservados.</p>
       </div>
       <ul class="footer-list">

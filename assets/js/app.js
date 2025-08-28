@@ -1,11 +1,6 @@
-// Header solid on scroll
-const header = document.querySelector('.site-header');
+// Year
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 10) header?.classList.add('scrolled');
-  else header?.classList.remove('scrolled');
-});
 
 // Mobile nav
 document.querySelectorAll('.nav-toggle').forEach(btn => {
@@ -27,7 +22,6 @@ function initSlider(root){
   };
   prev?.addEventListener('click', () => go(i-1));
   next?.addEventListener('click', () => go(i+1));
-  // auto
   setInterval(() => go(i+1), 6000);
 }
 document.querySelectorAll('.slider').forEach(initSlider);
@@ -41,7 +35,6 @@ window.addEventListener('load', () => {
 
 // --- Eventos / QR ---
 async function encryptToken(plainText, passphrase){
-  // AES-GCM with PBKDF2 key derivation
   const enc = new TextEncoder();
   const salt = crypto.getRandomValues(new Uint8Array(16));
   const iv = crypto.getRandomValues(new Uint8Array(12));
@@ -54,10 +47,9 @@ async function encryptToken(plainText, passphrase){
     ['encrypt']
   );
   const cipher = await crypto.subtle.encrypt({name:'AES-GCM', iv}, key, enc.encode(plainText));
-  // compose {s:base64, i:base64, c:base64}
   const b64 = (buf)=> btoa(String.fromCharCode(...new Uint8Array(buf)));
   const tokenObj = { s: b64(salt), i: b64(iv), c: b64(cipher) };
-  return btoa(JSON.stringify(tokenObj)); // one-line compact token
+  return btoa(JSON.stringify(tokenObj));
 }
 
 function buildQRUrl(data){
@@ -83,10 +75,9 @@ if (form){
     };
     localStorage.setItem('asadoPartyReserva', JSON.stringify(payload));
     const plain = JSON.stringify(payload);
-    const passphrase = 'ASADO_PARTY_TOKEN_V1'; // nota: demo, no usar en producción
+    const passphrase = 'ASADO_PARTY_TOKEN_V1';
     const token = await encryptToken(plain, passphrase);
     const qrUrl = buildQRUrl(token);
-    // Show QR
     const card = document.querySelector('.qr-card');
     const img = document.getElementById('qrImg');
     const dl = document.getElementById('dlQR');
