@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inscripción | El Asado Party</title>
+  <meta name="description" content="Inscribite al próximo Asado Party y generá tu código QR de confirmación." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header solid">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <img src="assets/images/logo.jpg" alt="El Asado Party" height="52" />
+      </a>
+      <nav class="nav">
+        <button class="nav-toggle" aria-label="Menu">☰</button>
+        <ul class="nav-menu">
+          <li><a href="./#eventos">Volver</a></li>
+          <li><a href="#pago">Pasarela</a></li>
+          <li><a href="#qr">QR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container narrow">
+    <h1 class="section-title">Inscripción al Festival Argentino — 6 de Septiembre</h1>
+    <p class="muted">Completá el formulario, elegí tu plan y generá tu QR. <b>Recordá</b> enviar el comprobante por WhatsApp al <a href="https://wa.me/573122112949" target="_blank" rel="noopener">312 211 2949</a>.</p>
+
+    <form id="inscripcionForm" class="card form">
+      <div class="grid two">
+        <div class="field">
+          <label>Nombre y Apellido</label>
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="field">
+          <label>Correo</label>
+          <input type="email" name="correo" placeholder="tu@correo.com" required />
+        </div>
+        <div class="field">
+          <label>Whatsapp</label>
+          <input type="tel" name="telefono" placeholder="3xx xxx xxxx" required />
+        </div>
+        <div class="field">
+          <label>Cantidad de personas</label>
+          <input type="number" name="cantidad" min="1" value="1" required />
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Plan</label>
+        <select name="plan" required>
+          <option value="ASADO_FIESTA">Asado + Fiesta — $65.000</option>
+          <option value="ASADO_CHORI_FIESTA">Asado + Choripán + Fiesta — $75.000</option>
+          <option value="SOLO_FIESTA">Solo Fiesta — $25.000</option>
+        </select>
+      </div>
+
+      <div id="pago" class="field">
+        <label>Medio de pago</label>
+        <div class="radio-group">
+          <label><input type="radio" name="pago" value="NEQUI" required /> Nequi</label>
+          <label><input type="radio" name="pago" value="DAVIPLATA" /> Daviplata</label>
+          <label><input type="radio" name="pago" value="BANCOLOMBIA" /> Transferencia Bancolombia</label>
+        </div>
+        <div class="pay-hint">
+          <p>📲 Pagá según el medio elegido y guardá el comprobante:</p>
+          <ul>
+            <li>Nequi: <b>312 347 9640</b> (Miguel Rojas)</li>
+            <li>Daviplata: <b>312 347 9640</b> (Miguel Rojas)</li>
+            <li>Bancolombia (Ahorros): <b>11337687123</b> — Manuel Emiliano Cornaglia (C.E: 939121)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Generar QR</button>
+        <a class="btn btn-outline" href="https://home.passline.com/home" target="_blank" rel="noopener">Comprar tu ticket</a>
+      </div>
+    </form>
+
+    <div id="qr" class="card qr-card hidden">
+      <h3>Tu código de confirmación</h3>
+      <p class="muted">Este QR contiene un token cifrado con tus datos de reserva. Mostralo el día del evento.</p>
+      <div class="qr-box">
+        <img id="qrImg" alt="QR de confirmación" />
+      </div>
+      <div class="actions">
+        <a id="dlQR" class="btn btn-yellow" download="asado-party-qr.png">Descargar QR</a>
+        <a id="sendWA" class="btn btn-outline" target="_blank" rel="noopener">Enviar comprobante por WhatsApp</a>
+      </div>
+      <details class="token-details">
+        <summary>Ver token (avanzado)</summary>
+        <textarea id="tokenOut" readonly rows="4"></textarea>
+      </details>
+      <p class="muted small">⚠️ Este sistema es una <b>simulación</b> de pasarela para Nequi/Daviplata. La validación final se realiza con tu comprobante por WhatsApp.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <img src="assets/images/logo.jpg" alt="El Asado Party" height="40" />
+        <p class="muted small">© <span id="year"></span> El Asado Party — Todos los derechos reservados.</p>
+      </div>
+      <ul class="footer-list">
+        <li>📞 Emiliano <a href="https://wa.me/573122112949" target="_blank" rel="noopener">312 211 2949</a></li>
+        <li>📞 Matías <a href="https://wa.me/573142068018" target="_blank" rel="noopener">314 206 8018</a></li>
+        <li>📞 Miguel <a href="https://wa.me/573123479640" target="_blank" rel="noopener">312 347 9640</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
