@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PQR / Reseñas — El Asado Party</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html"><img src="assets/img/logo.png" alt="El Asado Party" class="brand-mark"><span>El Asado Party</span></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="reservas.html">Reservas</a></li>
+          <li class="nav-item"><a class="nav-link active" href="comentarios.html">PQR / Reseñas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5 page-offset">
+    <h1 class="fw-bold mb-3">PQR / Reseñas 📝</h1>
+    <form id="pqrForm" class="row g-3 shadow-sm p-4 rounded bg-white">
+      <div class="col-md-6">
+        <label class="form-label">Nombre</label>
+        <input name="nombre" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Tipo</label>
+        <select name="tipo" class="form-select" required>
+          <option value="Reseña">Reseña</option>
+          <option value="Petición">Petición</option>
+          <option value="Queja">Queja</option>
+          <option value="Reclamo">Reclamo</option>
+        </select>
+      </div>
+      <div class="col-md-6"><label class="form-label">Instagram (usuario o URL)</label><input name="instagram" class="form-control" placeholder="@tuusuario o https://instagram.com/tuusuario"></div>
+      <div class="col-12">
+        <label class="form-label">Calificación</label>
+        <div class="rating" id="rating" aria-label="Calificación por estrellas">
+          <!-- Estrellas generadas por JS -->
+        </div>
+      </div>
+      <div class="col-12">
+        <label class="form-label">Comentario</label>
+        <textarea name="comentario" class="form-control" rows="3" required></textarea>
+      </div>
+      <div class="col-12 d-grid">
+        <button class="btn btn-success btn-lg" type="submit">Enviar</button>
+      </div>
+    </form>
+
+    <section class="mt-5">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2 class="h4 fw-bold">Comentarios recientes</h2>
+        <div>
+          <button id="btnExportPqr" class="btn btn-outline-secondary btn-sm d-none">Exportar CSV</button>
+          
+        </div>
+      </div>
+      <div class="list-group mt-3" id="listaPqr"></div>
+    </section>
+  
+    <section class="mt-5">
+      <h2 class="h5 fw-bold">Reseñas desde Instagram</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/ZZZZZZZZZ/" data-instgrm-version="14"></blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/WWWWWWWWW/" data-instgrm-version="14"></blockquote>
+        </div>
+      </div>
+    </section>
+    <script async src="//www.instagram.com/embed.js"></script>
+
+  </main>
+
+  <footer class="bg-dark text-white text-center py-4 mt-5 small">
+    <div class="container">© El Asado Party</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/comentarios.js"></script>
+  <script src="js/comentarios_v2.js"></script>
+</body>
+</html>
