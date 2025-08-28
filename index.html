@@ -7,7 +7,7 @@
   <meta name="description" content="El Asado Party: eventos culturales, música en vivo y el mejor asado argentino en Colombia." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -21,7 +21,7 @@
         <ul class="nav-menu">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#eventos">Eventos</a></li>
-          <li><a href="#resenas">Reseñas</a></li>
+          <li><a href="#galeria">Galería</a></li>
           <li><a href="#sobre">Sobre nosotros</a></li>
           <li><a href="#instagram">Instagram</a></li>
           <li><a class="btn btn-yellow" href="eventos.html">Inscribite</a></li>
@@ -37,13 +37,13 @@
       Tu navegador no soporta video de fondo.
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content container">
+    <div class="hero-content container"><div class="hero-bubble">
       <h1 class="title">El Asado <span>Party</span></h1>
       <p class="subtitle">Unimos música, cultura y el mejor asado argentino en Colombia.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="eventos.html">Comprar entradas</a>
       </div>
-    </div>
+    </div></div>
   </section>
 
   <!-- PROXIMOS EVENTOS -->
@@ -69,55 +69,36 @@
           <a class="btn btn-primary" href="eventos.html">Comprar entradas</a>
         </div>
       </article>
-    </div>
+    </div></div>
   </section>
 
-  <!-- RESEÑAS -->
-  <section id="resenas" class="section section-alt">
+  <!-- GALERÍA -->
+  <section id="galeria" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">La gente dice…</h2>
-      <div class="slider" data-slider="reviews">
+      <h2 class="section-title">Galería</h2>
+      <div class="slider gallery" data-slider="gallery">
         <button class="slider-btn prev" aria-label="anterior">‹</button>
         <div class="slider-track">
-          <div class="slide">
-            <div class="review">
-              <img class="avatar" src="assets/images/av1.svg" alt="Avatar 1" />
-              <div>
-                <h4>@maria.arg</h4>
-                <p>“La vibra argenta, el asado, la música… ¡una locura hermosa!”</p>
-                <div class="stars">★★★★★</div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="review">
-              <img class="avatar" src="assets/images/av2.svg" alt="Avatar 2" />
-              <div>
-                <h4>@fede.baires</h4>
-                <p>“El choripanaso es un viaje directo a Buenos Aires. Recomendadísimo.”</p>
-                <div class="stars">★★★★★</div>
-              </div>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="review">
-              <img class="avatar" src="assets/images/av3.svg" alt="Avatar 3" />
-              <div>
-                <h4>@luna.col</h4>
-                <p>“Organización 10/10. Tremenda fiesta, volví con amigos.”</p>
-                <div class="stars">★★★★★</div>
-              </div>
-            </div>
-          </div>
+          <div class="slide"><img src="assets/images/gallery/1.jpg" alt="Galería 1"></div>
+          <div class="slide"><img src="assets/images/gallery/2.jpg" alt="Galería 2"></div>
+          <div class="slide"><img src="assets/images/gallery/3.jpg" alt="Galería 3"></div>
+          <div class="slide"><img src="assets/images/gallery/4.jpg" alt="Galería 4"></div>
+          <div class="slide"><img src="assets/images/gallery/5.jpg" alt="Galería 5"></div>
+          <div class="slide"><img src="assets/images/gallery/6.jpg" alt="Galería 6"></div>
+          <div class="slide"><img src="assets/images/gallery/7.jpg" alt="Galería 7"></div>
+          <div class="slide"><img src="assets/images/gallery/8.jpg" alt="Galería 8"></div>
+          <div class="slide"><img src="assets/images/gallery/9.jpg" alt="Galería 9"></div>
+          <div class="slide"><img src="assets/images/gallery/10.jpg" alt="Galería 10"></div>
+          
         </div>
         <button class="slider-btn next" aria-label="siguiente">›</button>
       </div>
-      <p class="muted center">Podemos integrar comentarios de Instagram, Facebook o TikTok cuando lo desees.</p>
-    </div>
+      <p class="muted center">Subí tus fotos a <code>assets/images/gallery/</code> con el mismo nombre o agregá más y clóná un bloque <code>.slide</code>.</p>
+    </div></div>
   </section>
 
   <!-- SOBRE NOSOTROS -->
-  <section id="sobre" class="section container">
+  <section id="sobre" class="section container">          
     <h2 class="section-title">Somos cultura argentina</h2>
     <div class="grid about">
       <div>
@@ -136,11 +117,11 @@
         </ul>
       </div>
       <div class="mosaic">
-        <img src="assets/images/mosaic1.jpg" alt="Parrilla" />
-        <img src="assets/images/mosaic2.jpg" alt="Bandera" />
-        <img src="assets/images/mosaic3.jpg" alt="Público" />
+        <img src="assets/images/Asado.jpg" alt="Parrilla" />
+        <img src="assets/images/Fernet.jpg" alt="Fernet" />
+        <img src="assets/images/publico.jpg" alt="Público" />
       </div>
-    </div>
+    </div></div>
   </section>
 
   <!-- INSTAGRAM -->
@@ -170,7 +151,7 @@
       <p class="center">
         <a class="btn btn-yellow" href="https://www.instagram.com/el.asado.party/" target="_blank" rel="noopener">@el.asado.party</a>
       </p>
-    </div>
+    </div></div>
   </section>
 
   <footer class="site-footer">
