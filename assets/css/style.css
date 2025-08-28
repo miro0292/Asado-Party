@@ -82,10 +82,22 @@ a{color:inherit;text-decoration:none}
 .qr-box{display:grid;place-items:center;padding:10px}
 .qr-box img{width:240px;height:240px;border-radius:12px;border:2px solid var(--accent);background:white}
 
-.site-footer{background:var(--accent);color:white;padding:24px 0;margin-top:40px}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.footer-list{list-style:none;display:flex;gap:20px;flex-wrap:wrap;padding:0;margin:0}
-.footer-list a{color:var(--accent);font-weight:700}
+.site-footer {
+  background: var(--accent);   /* fondo oscuro celeste */
+  color: #f1f1f1;             /* texto más claro que el blanco puro */
+  padding: 24px 0;
+  margin-top: 40px;
+}
+
+.footer-list a {
+  color: #ffffff;             /* enlaces en blanco */
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-list a:hover {
+  color: #d1ecff;             /* un celeste clarito al pasar el mouse */
+}
 
 .hidden{display:none}
 
